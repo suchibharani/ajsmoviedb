@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AJS moviedb </title>
+
+<!--bootstrap-->
+<link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+<!--site Styles-->
+<link href="css/normalize.css" rel="stylesheet" type="text/css">
+<link href="css/animate.css" rel="stylesheet" type="text/css">
+<link href="css/ajsmoviedb.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-col5.css" rel="stylesheet" type="text/css">
+<link href="ui/jquery-ui.min.css" rel="stylesheet" type="text/css">
+<link href="css/materialize.css" rel="stylesheet" type="text/css">
+
+<!-- Fonts -->
+<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,400italic,500italic,700italic,700,900,900italic" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <section class="nav_wrap">
+         <nav class="default-primary-color">
+         <div class="nav-wrapper">
+          <a href="index.html" class="brand-logo">AngularJS Movie DB</a>
+          <ul class="right hide-on-med-and-down">
+            <li><a href="#"><i class="material-icons left">search</i> Search here </a></li>
+            <li><a href="#"><i class="material-icons left">playlist_add</i> Add new Movie</a></li>
+          </ul>
+             <ul id="slide-out" class="side-nav">
+            <li><a href="#!">Search here</a></li>
+            <li><a href="#!">Add new Movie</a></li>
+              
+          </ul>
+          <a href="#" data-activates="slide-out" class="button-collapse"><i class="mdi-navigation-menu"></i></a>
+        </div>
+          
+        </nav>
+    </section>
+    <section class="single_wrap mtb_100">
+       <div class="container">
+            <div class="row">
+                <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
+                     <div class="panel panel-default clearfix">
+                            <form class="col s12 p_25">
+                              <div class="row">
+                                <div class="input-field col s12">
+                                     <i class="material-icons prefix">account_circle</i>
+                                  <input placeholder="Placeholder" type="text" class="validate">
+                                  <label for="movie_name">New Movie Name</label>
+                                </div>
+                                  <div class="input-field col s12">
+                                 <button class="btn waves-effect waves-light btn-block accent-color" type="submit" name="action">Add New movie
+  </button>
+                                </div>
+                              </div> 
+                            </form> 
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- latest movie-->
+
+<!-- Script start -->
+<script type="text/javascript" src="js/jquery.min.js" ></script>
+<script type="text/javascript" src="js/jquery-migrate-1.2.1.min.js" ></script>
+<script type="text/javascript" src="ui/jquery-ui.min.js"></script>
+<script type="text/javascript" src="bootstrap/js/bootstrap.min.js" ></script>
+<script type="text/javascript" src="js/wow.min.js" ></script>
+<script type="text/javascript" src="js/materialize.js" ></script>
+
+    
+<!-- main js -->
+<script type="text/javascript" src="js/ajsmoviedb.js" ></script>
+    
+</body>
+</html>

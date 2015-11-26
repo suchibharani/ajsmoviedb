@@ -85,12 +85,35 @@ a , a:hover , a:active, a:focus { text-decoration: none; }
 .m_10{
     margin: 10px;
 }
+.mtb_60{
+    margin: 60px 0;
+}
+.mtb_100{
+    margin: 100px 0;
+}
+.p_10{
+    padding: 10px;
+}
+.p_25{
+    padding: 25px !important;
+}
+.strong{
+    font-weight: 600;
+}
+.new_hr{
+    width: 90%;
+    text-align: center;
+    margin: 0 auto;
+}
+.btn:hover{
+    color: #fff;
+}
 /*palette*/
 .dark-primary-color    { background: #0097A7; }
 .default-primary-color { background: #00BCD4; }
 .light-primary-color   { background: #B2EBF2; }
 .text-primary-color    { color: #FFFFFF; }
-.accent-color          { background: #536DFE; }
+.accent-color          { background: #536DFE !important; }
 .primary-text-color    { color: #212121; }
 .secondary-text-color  { color: #727272; }
 .divider-color         { border-color: #B6B6B6; }
@@ -122,6 +145,11 @@ nav .brand-logo{
     float: right;
     font-size: 14px;
 }
+/*single*/
+.list-movie > li {
+    margin: 5px 0;
+}
+
 /* Media Queries */
 
 /* Tablet */
