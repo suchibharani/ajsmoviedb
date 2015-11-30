@@ -7,11 +7,12 @@
                               <div class="row">
                                 <div class="input-field col s12">
                                      <i class="material-icons prefix">account_circle</i>
-                                  <input ng-modal="movie.name" type="text" class="validate">
+                                  <input ng-model="movie.name" type="text" class="validate">
                                   <label for="movie_name">New Movie Name</label>
+                                    <p> {{ movie }} </p>
                                 </div>
                                   <div class="input-field col s12">
-                                 <button class="btn waves-effect waves-light btn-block accent-color" type="submit" name="action">Add New movie
+                                 <button ng-click="saveMovie(movie);" class="btn waves-effect waves-light btn-block accent-color" type="submit" name="action">Add New movie
   </button>
                                 </div>
                               </div> 
