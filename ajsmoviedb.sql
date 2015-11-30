@@ -41,6 +41,8 @@ CREATE TABLE `ajsmoviedb` (
   `type` varchar(20) NOT NULL,
   `response` tinyint(1) NOT NULL,
   `status` tinyint(1) NOT NULL DEFAULT '1',
+  `created_at` int(11) NOT NULL,
+  `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`movieid`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
