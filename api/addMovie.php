@@ -2,8 +2,8 @@
 require_once 'db.php'; // The mysql database connection script
 $postdata = file_get_contents("php://input");
 $request = json_decode($postdata);
-print_r($request);
-if($request->Response != false ){
+//print_r($request);
+if(!empty($request->Title)){
 $title = $request->Title;
 $year = $request->Year;
 $rated = $request->Rated;
@@ -42,4 +42,6 @@ else{
     //echo $json_response = json_encode('status' => 0 );
 }
 }
+//echo $json_response = json_encode('status' => 0 );
+echo "error";
 ?>
