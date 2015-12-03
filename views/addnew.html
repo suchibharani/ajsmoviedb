@@ -4,6 +4,15 @@
                 <div class="col-md-offset-2 col-md-8 col-sm-12 col-xs-12">
                      <div class="panel panel-default clearfix">
                             <form class="col s12 p_25">
+                                <!-- success -->
+                                <div class="alert alert-success" role="alert" ng-show="hideSuccess">
+                                  <strong>{{ opmessage }} </strong>
+                                </div>
+                                <!--error-->
+                                <div class="alert alert-danger" role="alert" ng-show="hideError">
+                                  <strong>{{ opmessage }}</strong>
+                                </div>
+                                
                               <div class="row">
                                 <div class="input-field col s12">
                                      <i class="material-icons prefix">account_circle</i>

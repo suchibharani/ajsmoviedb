@@ -32,16 +32,17 @@ if(mysqli_num_rows($chkresult) == 0){
 $query="
 INSERT INTO ajsmoviedb(title,year,rated,released,runtime,genre,director,writer,actors,plot,language,country,awards,poster,metascore,imdbrating,imdbVotes,imdbid,type,response,created_at,updated_at)  
 VALUES ('$title', '$year', '$rated', '$Released' , '$Runtime' , '$Genre' , '$Director' , '$Writer' , '$Actors' , '$Plot' , '$Language' , '$Country' , '$Awards' , '$Poster' , '$Metascore' , '$imdbRating' , '$imdbVotes' , '$imdbID' , '$Type' , '$Response' , '$created' , '$updated' )";
-//$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
-//$result = $mysqli->affected_rows;
+$result = $mysqli->query($query) or die($mysqli->error.__LINE__);
+$result = $mysqli->affected_rows;
 //echo $json_response = json_encode('status' => 1 );
-    echo "insertion success";
+    echo "success";
 }
 else{
-    echo "already exist";
+    echo "exist";
     //echo $json_response = json_encode('status' => 0 );
 }
-}
+}else{
 //echo $json_response = json_encode('status' => 0 );
 echo "error";
+}
 ?>
