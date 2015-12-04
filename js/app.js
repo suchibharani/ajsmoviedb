@@ -1,7 +1,7 @@
 var app = angular.module('ajsMoviedb',['ngRoute']);
 app.config(function($routeProvider){
     $routeProvider
-    .when('/',{
+    .when('/movie',{
         controller : 'movieController',
         templateUrl: 'views/dashboard.html'
     })
@@ -9,8 +9,12 @@ app.config(function($routeProvider){
         controller : 'movieController',
         templateUrl: 'views/addnew.html'
     })
+    .when('/movie/:id',{
+        controller : 'singleController',
+        templateUrl: 'views/single.html'
+    })
     .otherwise({
-        redirectTo : '/'
+        redirectTo : '/movie'
     })
     
 });

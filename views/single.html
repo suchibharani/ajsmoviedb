@@ -1,0 +1,47 @@
+<section class="single_wrap mtb_30">
+       <div class="container">
+            <div class="row">
+                 <div class="panel panel-default">
+                     <div class="m_10">
+                         <a href="#/movie" class="btn waves-effect waves-light btn-block accent-color">Back to home</a>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-3 col-sm-3 col-xs-12">
+                            <div class="thumbnail m_10">
+                              <img alt="100%x200" ng-src="{{ movie.poster}}" >
+                              <div class="caption">
+                                <p>{{ movie.genre}}</p>
+                              </div>
+                            </div>
+                          </div>
+                         <div class="col-md-9 col-sm-9 col-xs-12">
+                             <div class="main_con mtb_10">
+                                 <h2 class="title">{{ movie.title}} ({{movie.year}})</h2>
+                                <ul class="list-movie mtb_10">
+                                  <li><span class="strong">Released on :</span> {{movie.released}}</li>
+                                  <li><span class="strong">Runtime :</span> {{movie.runtime}} </li>
+                                  <li><span class="strong">Genre :</span>
+                                      <a href="#">{{movie.genre}}</a>
+                                  </li>
+                                  <li><span class="strong">Director :</span> {{movie.director}} </li>
+                                  <li><span class="strong">Writer :</span> {{movie.writer}} </li>
+                                  <li><span class="strong">Actors :</span> {{movie.actors}} </li>
+                                  <li><span class="strong">Language :</span> {{movie.language}} </li>
+                                  <li><span class="strong">Country :</span> {{movie.country}} </li>
+                                  <li><span class="strong">Awards :</span> {{movie.awards}} </li>
+                                </ul>
+                             </div>
+                          </div>
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <hr class="new_hr">
+                              <div class="plot m_10">
+                                  <h2 class="title">Plot</h2>
+                              <p class="mtb_10">{{movie.plot}}</p>
+                              </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- latest movie-->

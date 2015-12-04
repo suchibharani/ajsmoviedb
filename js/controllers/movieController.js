@@ -1,4 +1,4 @@
-app.controller('movieController', ['$scope','$http','$timeout', function($scope, $http, $timeout) {
+app.controller('movieController', ['$scope','$http','$timeout','movieservice',function($scope, $http, $timeout,movieservice) {
     $scope.movie = {name: ''};
     $scope.singleMovie = {};
     $scope.addMovie = {};
@@ -42,4 +42,8 @@ app.controller('movieController', ['$scope','$http','$timeout', function($scope,
             return error;
         });
     };
+    movieservice.success(function(data){
+        console.log(data);
+        $scope.movies = data;
+    });
 }]);
