@@ -1,4 +1,4 @@
-app.controller('movieController', ['$scope','$http','$timeout','movieservice',function($scope, $http, $timeout,movieservice) {
+app.controller('movieController', ['$scope','$http','$timeout','movieservice','$route',function($scope, $http, $timeout,movieservice,$route) {
     $scope.movie = {name: ''};
     $scope.singleMovie = {};
     $scope.addMovie = {};
@@ -46,4 +46,8 @@ app.controller('movieController', ['$scope','$http','$timeout','movieservice',fu
         console.log(data);
         $scope.movies = data;
     });
+	$scope.reloadApp = function(){
+		 //$route.reload();
+		 $location.path('/movie');
+	}
 }]);

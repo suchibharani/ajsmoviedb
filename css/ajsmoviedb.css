@@ -145,6 +145,15 @@ nav .brand-logo{
     float: right;
     font-size: 14px;
 }
+.thumbnail > img, .thumbnail a > img {
+    margin-right: auto;
+    margin-left: auto;
+    height: 280px;
+}
+.thumbnail{
+	    min-height: 370px;
+}
+
 /*single*/
 .list-movie > li {
     margin: 5px 0;
