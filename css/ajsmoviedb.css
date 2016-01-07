@@ -120,6 +120,12 @@ a , a:hover , a:active, a:focus { text-decoration: none; }
     background-color: #536DFE !important;
     z-index: 0;
 }
+.switch label input[type=checkbox]:checked + .lever:after{
+    background-color: #00BCD4 !important;
+}
+.switch label input[type=checkbox]:checked + .lever {
+    background-color: #7AE7F5 !important;
+}
 /*palette*/
 .dark-primary-color    { background: #0097A7; }
 .default-primary-color { background: #00BCD4; }

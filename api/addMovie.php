@@ -24,14 +24,14 @@ $imdbVotes = $request->imdbVotes;
 $imdbID = $request->imdbID;
 $Type = $request->Type;
 $Response = $request->Response;
-$created = time();
-$updated = time();
+//$created = time();
+//$updated = time();
 $chkquery = "SELECT * FROM ajsmoviedb WHERE imdbid = '$imdbID'";
 $chkresult = $mysqli->query($chkquery) or die($mysqli->error.__LINE__);
 if(mysqli_num_rows($chkresult) == 0){
 $query="
-INSERT INTO ajsmoviedb(title,year,rated,released,runtime,genre,director,writer,actors,plot,language,country,awards,poster,metascore,imdbrating,imdbVotes,imdbid,type,response,created_at,updated_at)  
-VALUES ('$title', '$year', '$rated', '$Released' , '$Runtime' , '$Genre' , '$Director' , '$Writer' , '$Actors' , '$Plot' , '$Language' , '$Country' , '$Awards' , '$Poster' , '$Metascore' , '$imdbRating' , '$imdbVotes' , '$imdbID' , '$Type' , '$Response' , '$created' , '$updated' )";
+INSERT INTO ajsmoviedb(title,year,rated,released,runtime,genre,director,writer,actors,plot,language,country,awards,poster,metascore,imdbrating,imdbVotes,imdbid,type,response)  
+VALUES ('$title', '$year', '$rated', '$Released' , '$Runtime' , '$Genre' , '$Director' , '$Writer' , '$Actors' , '$Plot' , '$Language' , '$Country' , '$Awards' , '$Poster' , '$Metascore' , '$imdbRating' , '$imdbVotes' , '$imdbID' , '$Type' , '$Response' )";
 $result = $mysqli->query($query) or die($mysqli->error.__LINE__);
 $result = $mysqli->affected_rows;
 //echo $json_response = json_encode('status' => 1 );

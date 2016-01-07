@@ -10,47 +10,39 @@
                            <table class="responsive-table">
                                   <thead>
                                     <tr>
-                                        <th data-field="id">   
+                                        <th data-field="check_list">   
                                         <input type="checkbox" id="myCheckbox" class="filled-in" />
 <label for="myCheckbox"></label></th>
-                                        <th data-field="id">Name</th>
-                                        <th data-field="name">Item Name</th>
-                                        <th data-field="price">Item Price</th>
-                                        <th data-field="price">Action</th>
+                                        <th data-field="name">Movie Name</th>
+                                        <th data-field="year">Year</th>
+                                        <th data-field="udate">Updated date</th>
+                                        <th data-field="status">Status</th>
+                                        <th data-field="action">Action</th>
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr>
+                                    <tr  ng-repeat="movie in movies">
                                       <td><input type="checkbox" id="myCheckbox1" class="filled-in light-blue" />
 <label for="myCheckbox1"></label></td>
-                                      <td>Alvin</td>
-                                      <td>Eclair</td>
-                                      <td>$0.87</td>
+                                      <td>{{ movie.title }}</td>
+                                      <td>{{ movie.year }} </td>
+                                      <td>{{ movie.updated_at | date : 'fullDate' }}</td>
                                       <td>
-                                        <a class="waves-effect waves-light btn btn-sm accent-color">Edit</a>
+                                     <!-- Switch -->
+                                      <div class="switch">
+                                        <label>
+                                          Off
+                                          <input type="checkbox"  ng-checked="movie.status == true">
+                                          <span class="lever"></span>
+                                          On
+                                        </label>
+                                      </div>
+                                          
+                                      </td>
+                                      <td>
+                                        <a class="waves-effect waves-light btn btn-sm accent-color" ng-click="deleteMovie(movie.movieid)">Edit</a>
                                         <a class="waves-effect waves-light btn btn-sm danger-color">Delete</a>
                                         </td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" id="myCheckbox2" class="filled-in" />
-<label for="myCheckbox2"></label></td>
-                                      <td>Alan</td>
-                                      <td>Jellybean</td>
-                                      <td>$3.76</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" id="myCheckbox3" class="filled-in" />
-<label for="myCheckbox3"></label></td>
-                                      <td>Jonathan</td>
-                                      <td>Lollipop</td>
-                                      <td>$7.00</td>
-                                    </tr>
-                                    <tr>
-                                        <td><input type="checkbox" id="myCheckbox4" class="filled-in" />
-<label for="myCheckbox4"></label></td>
-                                      <td>Shannon</td>
-                                      <td>KitKat</td>
-                                      <td>$9.99</td>
                                     </tr>
                                   </tbody>
                                 </table>

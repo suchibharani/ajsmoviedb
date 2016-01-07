@@ -1,4 +1,4 @@
-app.controller('movieController', ['$scope','$http','$timeout','movieservice','$route',function($scope, $http, $timeout,movieservice,$route) {
+app.controller('movieController', ['$scope','$http','$timeout','movieservice','$route','$location','$window', function($scope, $http, $timeout,movieservice,$route, $location, $window) {
     $scope.movie = {name: ''};
     $scope.singleMovie = {};
     $scope.addMovie = {};
@@ -42,12 +42,28 @@ app.controller('movieController', ['$scope','$http','$timeout','movieservice','$
             return error;
         });
     };
-    movieservice.success(function(data){
-        console.log(data);
-        $scope.movies = data;
-    });
+    function getMovie(){ 
+        $http.get('api/getMovie.php')
+         .success(function(data){
+             $scope.movies = data; 
+         });
+//        movieservice.success(function(data){
+//            console.log(data);
+//            $scope.movies = data;     
+//        });
+    }
+    getMovie();
+    $scope.deleteMovie = function(movieId){
+        if(confirm("Are you sure to delete this movie?")){
+            $http.post("api/deleteMovie.php?movieId="+movieId+"status="+0).success(function(data){
+                console.log(data);
+                getMovie();
+              });
+            }
+    };
 	$scope.reloadApp = function(){
-		 //$route.reload();
+         //getMovie();
 		 $location.path('/movie');
-	}
+         $window.location.reload(); 
+	};
 }]);
