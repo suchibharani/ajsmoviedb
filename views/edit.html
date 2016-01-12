@@ -1,0 +1,44 @@
+<section class="single_wrap mtb_30">
+       <div class="container">
+            <div class="row">
+                 <div class="panel panel-default">
+                     <div class="m_10">
+                         <a href="#/movie" class="btn waves-effect waves-light btn-block accent-color">Back to home</a>
+                     </div>
+                     <div class="row">
+                         <div class="col-md-12 col-sm-12 col-xs-12">
+                             <div class="plot m_10">
+                                  <h2 class="title">You are authorized to edit only plot of the movie</h2>
+                                
+                              </div>
+                             <form class="col s12">
+                                  <div class="row  pull-right">
+                                    <div class="input-field col s12">
+                                        <a class="waves-effect waves-light btn" ng-click="editMovie(movie.movieid,movie.plot)">Save</a>
+                                      </div>
+                                 </div>
+                                  <div class="row">
+                                      <strong class="m_10">Plot of the movie</strong>
+                                    <div class="input-field col s12">
+                                      <textarea id="textarea1" class="materialize-textarea" ng-model="movie.plot"></textarea>
+
+                                    </div>
+                                  </div>
+                                </form>
+                             
+                          </div>
+                            
+                            
+                          <div class="col-md-12 col-sm-12 col-xs-12">
+                              <hr class="new_hr">
+                              <div class="plot m_10">
+                                  <h2 class="title">Plot</h2>
+                              <p class="mtb_10">{{movie.plot}}</p>
+                              </div>
+                         </div>
+                     </div>
+                </div>
+            </div>
+        </div> 
+    </section>
+    <!-- latest movie-->

@@ -2,17 +2,27 @@
        <div class="container">
             <div class="row">
                  <div class="panel panel-default">
-                     <div class="m_10">
-                         <a href="#/movie" class="btn waves-effect waves-light accent-color">Back to home</a>
+                     <div class="row">
+                         <div class="col-md-8 col-sm-6 col-xs-12">
+                             <div class="m_10">
+                                 <a href="#/movie" class="btn waves-effect waves-light accent-color">Back to home</a>
+                             </div>
+                         </div>
+                         <div class="col-md-4 col-sm-6 col-xs-12">
+                             <div class="input-field col s12">
+                                  <i class="material-icons prefix">search</i>
+                                  <input id="icon_prefix" type="text" ng-model="searchQry" class="validate">
+                                  <label for="icon_prefix">Search here</label>
+                                </div>
+                         </div>
                      </div>
+                        
                      <div class="row">
                          <div class="col-md-12 col-sm-12 col-xs-12">
                            <table class="responsive-table">
                                   <thead>
                                     <tr>
-                                        <th data-field="check_list">   
-                                        <input type="checkbox" id="myCheckbox" class="filled-in" />
-<label for="myCheckbox"></label></th>
+                                       
                                         <th data-field="name">Movie Name</th>
                                         <th data-field="year">Year</th>
                                         <th data-field="udate">Updated date</th>
@@ -21,27 +31,29 @@
                                     </tr>
                                   </thead>
                                   <tbody>
-                                    <tr  ng-repeat="movie in movies">
-                                      <td><input type="checkbox" id="myCheckbox1" class="filled-in light-blue" />
-<label for="myCheckbox1"></label></td>
+                                    <tr  ng-repeat="movie in movies | filter:searchQry | orderBy: 'title' ">
                                       <td>{{ movie.title }}</td>
                                       <td>{{ movie.year }} </td>
                                       <td>{{ movie.updated_at | date : 'fullDate' }}</td>
                                       <td>
+<!--
+                                          <input type="checkbox"  class="filled-in" id="filled-in-box{{movie.movieid}}"  ng-model="movie.status" ng-change="updateMovie(movie.movieid , movie.status)"  ng-checked="{{movie.status}}" ng-true-value="'1'" ng-false-value = "'0'"  />
+                                          <label for="filled-in-box{{movie.movieid}}">{{movie.status}}</label>
+-->
                                      <!-- Switch -->
                                       <div class="switch">
                                         <label>
                                           Off
-                                          <input type="checkbox"  ng-checked="movie.status == true">
+                                          <input type="checkbox" ng-model="movie.status" ng-change="updateMovie(movie.movieid , movie.status)"  ng-checked="{{movie.status}}" ng-true-value="'1'" ng-false-value = "'0'" >
                                           <span class="lever"></span>
                                           On
                                         </label>
                                       </div>
-                                          
+                                         
                                       </td>
                                       <td>
-                                        <a class="waves-effect waves-light btn btn-sm accent-color" ng-click="deleteMovie(movie.movieid)">Edit</a>
-                                        <a class="waves-effect waves-light btn btn-sm danger-color">Delete</a>
+                                        <a class="waves-effect waves-light btn btn-sm accent-color" href="#/movie/{{$index}}/edit">Edit</a>
+                                        <a class="waves-effect waves-light btn btn-sm danger-color" ng-click="deleteMovie(movie.movieid)">Delete</a>
                                         </td>
                                     </tr>
                                   </tbody>

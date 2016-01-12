@@ -17,6 +17,10 @@ app.config(function($routeProvider){
         controller : 'movieController',
         templateUrl: 'views/manage.html'
     })
+     .when('/movie/:id/edit',{
+        controller : 'singleController',
+        templateUrl: 'views/edit.html'
+    })
     .otherwise({
         redirectTo : '/movie'
     })
