@@ -1,2 +1,2 @@
 # ajsmoviedb
-AngularJS Movie Database - Under Constructions
+AngularJS Movie Database
